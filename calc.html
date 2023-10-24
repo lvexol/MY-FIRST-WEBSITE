@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bill Calculator</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <video id="backgroundVideo" autoplay loop muted>
+        <source src="background-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <nav>
+        <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./products.html">Products</a></li>
+            <li><a href="./calc.html">calculate</a></li>
+            <li><a href="./form.html">order</a></li>
+        </ul>
+    </nav>
+    <div class="product">
+        <h2>Bill Calculator</h2>
+        <label for="product1">Product 1 Quantity: </label>
+        <input type="number" id="product1" min="0" value="0"><br><br>
+        
+        <label for="product2">Product 2 Quantity: </label>
+        <input type="number" id="product2" min="0" value="0"><br><br>
+
+        <label for="country">Select Country: </label>
+        <select id="country">
+            <option value="default" selected>store bought</option>
+            <option value="usa">USA ($10 Delivery Charge)</option>
+            <option value="canada">Canada ($15 Delivery Charge)</option>
+            <option value="uk">UK ($20 Delivery Charge)</option>
+        </select><br><br>
+
+        <button onclick="calculateTotal()">Calculate Total</button><br><br>
+        
+        <h3>Total Bill: $<span id="total">0</span></h3>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+</html>

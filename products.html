@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <video id="backgroundVideo" autoplay loop muted>
+        <source src="background-video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+    <nav>
+        <ul>
+            <li><a href="./home.html">Home</a></li>
+            <li><a href="./products.html">Products</a></li>
+            <li><a href="./calc.html">calculate</a></li>
+            <li><a href="./form.html">order</a></li>
+        </ul>
+    </nav>
+    <h1 style="text-align: center; color:aliceblue">Our Products</h1>
+    
+    <div class="product" onmouseenter="showInfo(1)" onmouseleave="hideInfo(1)" >
+        <img id="myImage" src="product1.jpeg" alt="Image" onclick="openImage('product1.jpeg')">
+        <h2>Product 1</h2>
+        <p id="productInfo1" class="info">Description of Product 1.</p>
+        <p id="productPrice1" class="price">$10.00</p>
+    </div>
+    
+    <div class="product" onmouseenter="showInfo(2)" onmouseleave="hideInfo(2)" >
+        <img id="myImage" src="product2.jpeg" alt="Image" onclick="openImage('product2.jpeg')">
+        <h2>Product 2</h2>
+        <p id="productInfo2" class="info">Description of Product 2.</p>
+        <p id="productPrice2" class="price">$15.00</p>
+    </div>
+
+    <!-- Add more product entries as needed -->
+
+    <!-- Modal for Image -->
+    <div id="imageModal1" class="modal">
+        <span class="close" onclick="closeImage(1)">&times;</span>
+        <img class="modal-content" id="modalImage1">
+    </div>
+
+    <!-- Second Image Modal -->
+    <div id="imageModal2" class="modal">
+        <span class="close" onclick="closeImage(2)">&times;</span>
+        <img class="modal-content" id="modalImage2">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
